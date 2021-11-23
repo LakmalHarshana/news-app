@@ -1,0 +1,79 @@
+{
+  "name": "hapi-api",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "start": "NODE_ENV=development & nodemon server",
+    "test": "lab -a @hapi/code -L -I 'Reflect,core,_babelPolyfill,regeneratorRuntime,CSS,@@any-promise/REGISTRATION,__core-js_shared__,CSS'",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
+    "migrate": "sequelize-cli db:migrate ",
+    "seed:all": "sequelize-cli db:seed:all "
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "@hapi/boom": "9.x.x",
+    "@hapi/glue": "8.x.x",
+    "@hapi/hapi": "20.x.x",
+    "@hapi/joi": "^15.1.1",
+    "aws-sdk": "^2.794.0",
+    "bcrypt": "^5.0.0",
+    "boom": "^7.3.0",
+    "confidence": "4.x.x",
+    "dotenv": "8.x.x",
+    "hapi-auth-jwt2": "^10.2.0",
+    "hapi-sentry": "^3.2.0",
+    "hapi-sequelizejs": "^4.3.0",
+    "hapi-swaggered": "^3.0.2",
+    "hapi-swaggered-ui": "^3.0.2",
+    "haute-couture": "3.x.x",
+    "hpal-debug": "1.x.x",
+    "jsonwebtoken": "^8.5.1",
+    "lalalambda": "git+https://github.com/hapipal/lalalambda.git",
+    "log4js": "^6.3.0",
+    "moment": "^2.28.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "node-schedule": "^1.3.2",
+    "nodemailer": "^6.4.16",
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0",
+    "serverless-plugin-scripts": "^1.0.2",
+    "toys": "2.x.x",
+    "umzug": "^2.3.0",
+    "uuid": "^8.3.0",
+    "xlsx": "^0.17.0",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "@hapi/code": "8.x.x",
+    "@hapi/eslint-config-hapi": "13.x.x",
+    "serverless": "^2.17.0",
+    "@hapi/eslint-plugin-hapi": "4.x.x",
+    "@hapi/lab": "23.x.x",
+    "babel-eslint": "10.x.x",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "hpal": "2.x.x",
+    "husky": "^4.3.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.1.1"
+  }
+}

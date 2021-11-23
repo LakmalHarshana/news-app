@@ -1,0 +1,15 @@
+# serverless.yml
+service: hapi-api
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-southeast-1
+  stage: prod
+plugins:
+  - lalalambda
+  - serverless-plugin-scripts
+# custom:
+#   scripts:
+#     hooks:
+#       'deploy:finalize': sls invoke -f database_setup
